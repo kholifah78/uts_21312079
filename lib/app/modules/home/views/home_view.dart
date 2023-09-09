@@ -44,7 +44,7 @@ class HomeView extends GetView<HomeController> {
    Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text('Data Product'),
+          title: const Text('Home'),
           centerTitle: true,
           actions: [
             IconButton(
@@ -77,7 +77,7 @@ class HomeView extends GetView<HomeController> {
       // ),
       //2. Menampilkan data secara realtime
        body: StreamBuilder<QuerySnapshot<Object?>>(
-        stream: controller.streamData(),
+        stream: FirebaseFirestore.instance.collection('mahasiswa').snapshots(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.active) {
             //mengambil data
@@ -92,7 +92,7 @@ class HomeView extends GetView<HomeController> {
                 title: Text(
                   "${(ListAllDocs[Index].data() as Map<String, dynamic>)["name"]}"),
                 subtitle: Text(
-                  "${(ListAllDocs[Index].data() as Map<String, dynamic>)["price"]}"),
+                  "${(ListAllDocs[Index].data() as Map<String, dynamic>)["npm"]}"),
                   trailing: IconButton(
                     onPressed: () => showOption(ListAllDocs[Index].id),
                     icon: Icon(Icons.more_vert),

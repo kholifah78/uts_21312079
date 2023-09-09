@@ -10,7 +10,7 @@ import '../modules/resetpassword/bindings/resetpassword_binding.dart';
 import '../modules/resetpassword/views/resetpassword_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
-import '../modules/update_product/bindings/update_product_binding.dart';
+import '../modules/update_product/bindings/input_mahasiswa_binding.dart';
 import '../modules/update_product/views/update_product_view.dart';
 
 part 'app_routes.dart';

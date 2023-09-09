@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../controllers/update_product_controller.dart';
+import '../controllers/update_product.dart';
 
 class UpdateProductBinding extends Bindings {
   @override
